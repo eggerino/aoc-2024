@@ -8,15 +8,15 @@ for line in open(0).readlines():
 list_one.sort()
 list_two.sort()
 
-part1 = 0
+total = 0
 for num_one, num_two in zip(list_one, list_two):
-    part1 += abs(num_one - num_two)
+    total += abs(num_one - num_two)
 
-print("Part 1:", part1)
+print("Part 1:", total)
 
-part2 = 0
+total = 0
 counter = Counter(list_two)
 for num in list_one:
-    part2 += num * counter.get(num, 0)
+    total += num * counter.get(num, 0)
 
-print("Part 2:", part2)
+print("Part 2:", total)
